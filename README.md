@@ -69,10 +69,12 @@ You can also check Replication from All Nodes as they should return consistent d
 curl http://localhost:8000/printers
 curl http://localhost:8001/printers
 curl http://localhost:8002/printers
+
 **Get All Filaments**
 curl http://localhost:8000/filaments
 curl http://localhost:8001/filaments
 curl http://localhost:8002/filaments
+
 **Get All Print Jobs**
 curl http://localhost:8000/printjobs
 curl http://localhost:8001/printjobs
