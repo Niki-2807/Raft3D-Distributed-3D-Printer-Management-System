@@ -37,19 +37,19 @@ Node 3 on ports 8002/9002
 Use the following sample commands to interact with the Raft3D cluster. These examples assume the leader node1 is running at localhost:8000.
 
 **1. Add a Printer**
-curl -X POST "http://localhost:8000/printers" ^
--H "Content-Type: application/json" ^
--d "{\"id\":\"p1\",\"company\":\"Creality\",\"model\":\"Ender3\"}"
+curl -X POST http://localhost:8000/printers \
+  -H "Content-Type: application/json" \
+  -d "{\"id\":\"p1\",\"company\":\"Creality\",\"model\":\"Ender3\"}"
 
 **2. Add a Filament**
-curl -X POST "http://localhost:8000/filaments" ^
--H "Content-Type: application/json" ^
--d "{\"id\":\"f1\",\"type\":\"PLA\",\"color\":\"Red\",\"total_weight_in_grams\":1000,\"remaining_weight_in_grams\":1000}"
+curl -X POST http://localhost:8000/filaments \
+  -H "Content-Type: application/json" \
+  -d "{\"id\":\"f1\",\"type\":\"PLA\",\"color\":\"Red\",\"total_weight_in_grams\":1000,\"remaining_weight_in_grams\":1000}"
 
 **3. Create a Print Job**
-curl -X POST "http://localhost:8000/printjobs" ^
--H "Content-Type: application/json" ^
--d "{\"id\":\"j1\",\"printer_id\":\"p1\",\"filament_id\":\"f1\",\"filepath\":\"/prints/cube.gcode\",\"print_weight_in_grams\":200,\"status\":\"queued\"}"
+curl -X POST http://localhost:8000/printjobs \
+  -H "Content-Type: application/json" \
+  -d "{\"id\":\"j1\",\"printer_id\":\"p1\",\"filament_id\":\"f1\",\"filepath\":\"/prints/cube.gcode\",\"print_weight_in_grams\":200,\"status\":\"queued\"}"
 
 **4. Update Print Job Status**
 curl -X POST "http://localhost:8000/printjobs/j1/status?status=running"
