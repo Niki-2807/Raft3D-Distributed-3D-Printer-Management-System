@@ -66,16 +66,16 @@ Node 3 on ports 8002/9002
 ### Replication from Followers
 
 **Get All Printers**
-1) curl http://localhost:8001/printers
-2) curl http://localhost:8002/printers
+- curl http://localhost:8001/printers
+- curl http://localhost:8002/printers
 
 **Get All Filaments**
-1) curl http://localhost:8001/filaments
-2) curl http://localhost:8002/filaments
+- curl http://localhost:8001/filaments
+- curl http://localhost:8002/filaments
 
 **Get All Print Jobs**
-1) curl http://localhost:8001/printjobs
-2) curl http://localhost:8002/printjobs
+- curl http://localhost:8001/printjobs
+- curl http://localhost:8002/printjobs
 
 ### Leader Election
 1) You can simulate leader failure and verify leader election works as expected:
