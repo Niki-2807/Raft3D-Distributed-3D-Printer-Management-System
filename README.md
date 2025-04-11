@@ -21,7 +21,9 @@ Go 1.18+
 
 ### Install Dependencies
 
+```
 go mod tidy
+```
 
 ### Quick Start (Windows)
 
@@ -38,48 +40,66 @@ This will open 3 separate terminals for:
 ### Interaction with Raft3D Cluster
 
 **1. Add a Printer**
-- curl -X POST http://localhost:8000/printers \
+```
+curl -X POST http://localhost:8000/printers \
   -H "Content-Type: application/json" \
   -d "{\"id\":\"p1\",\"company\":\"Creality\",\"model\":\"Ender3\"}"
+```
 
 **2. Add a Filament**
-- curl -X POST http://localhost:8000/filaments \
+```
+curl -X POST http://localhost:8000/filaments \
   -H "Content-Type: application/json" \
   -d "{\"id\":\"f1\",\"type\":\"PLA\",\"color\":\"Red\",\"total_weight_in_grams\":1000,\"remaining_weight_in_grams\":1000}"
+```
 
 **3. Create a Print Job**
-- curl -X POST http://localhost:8000/printjobs \
+```
+curl -X POST http://localhost:8000/printjobs \
   -H "Content-Type: application/json" \
   -d "{\"id\":\"j1\",\"printer_id\":\"p1\",\"filament_id\":\"f1\",\"filepath\":\"/prints/cube.gcode\",\"print_weight_in_grams\":200,\"status\":\"queued\"}"
+```
 
 **4. Update Print Job Status**
-- curl -X POST "http://localhost:8000/printjobs/j1/status?status=running"
+```
+curl -X POST "http://localhost:8000/printjobs/j1/status?status=running"
+```
 
 **5. Get All Print Jobs**
-- curl -X GET "http://localhost:8000/printjobs"
+```
+curl -X GET "http://localhost:8000/printjobs"
+```
 
 **6. Get All Printers**
-- curl -X GET "http://localhost:8000/printers"
+```
+curl -X GET "http://localhost:8000/printers"
+```
 
 **7. Get All Filaments**
-- curl -X GET "http://localhost:8000/filaments"
-
+```
+curl -X GET "http://localhost:8000/filaments"
+```
 ---
 
 ### Replication from Followers
 
 **Get All Printers**
-- curl http://localhost:8001/printers
-- curl http://localhost:8002/printers
+```
+curl http://localhost:8001/printers
+curl http://localhost:8002/printers
+```
 
 **Get All Filaments**
-- curl http://localhost:8001/filaments
-- curl http://localhost:8002/filaments
+```
+curl http://localhost:8001/filaments
+curl http://localhost:8002/filaments
+```
 
 **Get All Print Jobs**
-- curl http://localhost:8001/printjobs
-- curl http://localhost:8002/printjobs
-
+```
+curl http://localhost:8001/printjobs
+curl http://localhost:8002/printjobs
+```
 ---
 
 ### Leader Election
