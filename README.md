@@ -18,7 +18,6 @@
 ### Prerequisites
 
 - Go 1.18+
-- Terminal or shell access
 
 ### Install Dependencies
 
