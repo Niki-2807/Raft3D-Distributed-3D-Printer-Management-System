@@ -34,7 +34,7 @@ Node 1 (Leader) on ports 8000/9000
 Node 2 on ports 8001/9001
 Node 3 on ports 8002/9002
 
-### INTERACTION WITH RAFT3D CLUSTER
+### Interaction with Raft3D Cluster
 
 **1. Add a Printer**
 - curl -X POST http://localhost:8000/printers \
