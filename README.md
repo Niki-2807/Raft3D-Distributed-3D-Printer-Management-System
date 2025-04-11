@@ -33,6 +33,8 @@ This will open 3 separate terminals for:
 - Node 2 on ports 8001/9001
 - Node 3 on ports 8002/9002
 
+---
+
 ### Interaction with Raft3D Cluster
 
 **1. Add a Printer**
@@ -62,6 +64,8 @@ This will open 3 separate terminals for:
 **7. Get All Filaments**
 - curl -X GET "http://localhost:8000/filaments"
 
+---
+
 ### Replication from Followers
 
 **Get All Printers**
@@ -75,6 +79,8 @@ This will open 3 separate terminals for:
 **Get All Print Jobs**
 - curl http://localhost:8001/printjobs
 - curl http://localhost:8002/printjobs
+
+---
 
 ### Leader Election
 1) You can simulate leader failure and verify leader election works as expected:
