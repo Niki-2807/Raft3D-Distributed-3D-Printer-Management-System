@@ -29,9 +29,9 @@ Run the following to spin up all 3 nodes instantly:
 run_raft_cluster.bat
 
 This will open 3 separate terminals for:
-Node 1 (Leader) on ports 8000/9000
-Node 2 on ports 8001/9001
-Node 3 on ports 8002/9002
+- Node 1 (Leader) on ports 8000/9000
+- Node 2 on ports 8001/9001
+- Node 3 on ports 8002/9002
 
 ### Interaction with Raft3D Cluster
 
