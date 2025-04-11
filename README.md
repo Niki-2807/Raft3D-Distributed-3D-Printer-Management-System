@@ -63,7 +63,7 @@ curl -X GET "http://localhost:8000/printers"
 **7. Get All Filaments**
 curl -X GET "http://localhost:8000/filaments"
 
-You can also check Replication from All Nodes as they should return consistent data across all nodes.
+### Replication from Followers
 
 **Get All Printers**
 curl http://localhost:8000/printers
@@ -80,7 +80,7 @@ curl http://localhost:8000/printjobs
 curl http://localhost:8001/printjobs
 curl http://localhost:8002/printjobs
 
-**Leader Election**
+### Leader Election
 1) You can simulate leader failure and verify leader election works as expected:
 2) Start all 3 nodes using your run_raft_cluster.bat.
 3) Use curl or Postman to send a POST request to localhost:8000 (assumed leader).
