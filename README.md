@@ -39,21 +39,21 @@ This will open 3 separate terminals for:
 
 ### Interaction with Raft3D Cluster
 
-**1. Add a Printer**
+**1. Post a Printer**
 ```
 curl -X POST http://localhost:8000/printers \
   -H "Content-Type: application/json" \
   -d "{\"id\":\"p1\",\"company\":\"Creality\",\"model\":\"Ender3\"}"
 ```
 
-**2. Add a Filament**
+**2. Post a Filament**
 ```
 curl -X POST http://localhost:8000/filaments \
   -H "Content-Type: application/json" \
   -d "{\"id\":\"f1\",\"type\":\"PLA\",\"color\":\"Red\",\"total_weight_in_grams\":1000,\"remaining_weight_in_grams\":1000}"
 ```
 
-**3. Create a Print Job**
+**3. Post a Print Job**
 ```
 curl -X POST http://localhost:8000/printjobs \
   -H "Content-Type: application/json" \
